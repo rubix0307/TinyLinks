@@ -1,5 +1,4 @@
 venv
-docker-compose.yml
 test_main.http
 .idea
 .env
