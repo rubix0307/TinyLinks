@@ -37,7 +37,11 @@ async def update_short_url(short_link: str, new_long_url: str):
     else:
         return {'error': 'not updated'}
 
+async def get_all_user_url(user_id):
+    links = db.link.find({"user_id": user_id})
+    data_as_list = await links.to_list(length=100)
 
+    return data_as_list
 
 
 
